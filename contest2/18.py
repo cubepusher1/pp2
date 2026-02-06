@@ -1,13 +1,13 @@
 n = int(input())
-freq = {}
+arr = [input().strip() for _ in range(n)]
 
-for i in range(n):
-    el = input()
-    if el in freq:
-        freq[el] += 1
-    else:
-        freq[el] = 1
+first_index = {}
 
-for key in freq:
-    print(key, end=" ")
-    print(freq[key])
+# store first occurrence (1-based index)
+for i, s in enumerate(arr, start=1):
+    if s not in first_index:
+        first_index[s] = i
+
+# sort unique strings
+for s in sorted(first_index.keys()):
+    print(s, first_index[s])
