@@ -1,0 +1,1 @@
+if 16 == 4**2: print("16 is 4 squared")
