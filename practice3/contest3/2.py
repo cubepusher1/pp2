@@ -1,11 +1,20 @@
 n = int(input())
 
 def isUsual(num):   
-    for i in range(6, num//2+1):
-        if i % 2 != 0 and i % 3 != 0 and i % 5 != 0:
-            if num % i == 0:
-                return False  
-    return True 
+    while num > 1:
+        if num % 2 == 0:
+            num /= 2 
+        if num % 3 == 0:
+            num /= 3
+        if num % 5 == 0:
+            num /= 5
+        if num % 2 != 0 and num % 5 != 0 and num % 3 != 0:
+            break
+    
+    if num == 1:
+        return True 
+    else:
+        return False 
 
 if isUsual(n):
     print("Yes")
