@@ -9,6 +9,6 @@ matches = pattern.findall(text)
 
 if matches:
     for item, qty, price in matches:
-        print(f"Item: {item.strip()}, Quantity: {qty}, Price: ${price}")
+        print(f"Item: {item.strip()}, Quantity: {qty}, Price: ${price}, Total: ${int(qty)*float(price)}")
 else:
     print("No items found.")
