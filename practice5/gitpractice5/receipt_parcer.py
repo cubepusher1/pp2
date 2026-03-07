@@ -17,4 +17,4 @@ else:
     print("No items found.")
 
 if total != 0:
-    print(total)
+    print(f"Overall total is: {total}")
