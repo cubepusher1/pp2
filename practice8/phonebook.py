@@ -5,7 +5,7 @@ def search_contacts():
     conn = connect()
     cur = conn.cursor()
 
-    cur.execute("SELECT * FROM get_contacts_by_pattern(%s::text, %s::text)", (pattern,))
+    cur.execute("SELECT * FROM get_contacts_by_pattern(%s::text)", (pattern,))
     rows = cur.fetchall()
 
     for row in rows:
@@ -53,7 +53,7 @@ def paginate_contacts():
     conn = connect()
     cur = conn.cursor()
 
-    cur.execute("SELECT * FROM get_contacts_paginated(%s::text, %s::text)", (limit, offset))
+    cur.execute("SELECT * FROM get_contacts_paginated(%s::int, %s::int)", (limit, offset))
     rows = cur.fetchall()
 
     for row in rows:
