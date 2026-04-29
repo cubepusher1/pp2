@@ -128,7 +128,7 @@ def main():
                 if event.key == pygame.K_UP and dy == 0:
                     dx, dy = 0, -1
                 elif event.key == pygame.K_DOWN and dy == 0:
-                    dx, dy = 0, 1
+                    dx, dy = 0, 5
                 elif event.key == pygame.K_LEFT and dx == 0:
                     dx, dy = -1, 0
                 elif event.key == pygame.K_RIGHT and dx == 0:
